@@ -257,7 +257,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Landmark"/>
+                        <Property name="text" type="java.lang.String" value="Batangas State University"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblProvince">
@@ -265,7 +265,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Province"/>
+                        <Property name="text" type="java.lang.String" value="Batangas"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblCleanup">
@@ -273,7 +273,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Cleanup Site"/>
+                        <Property name="text" type="java.lang.String" value="Beach"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -735,7 +735,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Landmark"/>
+                        <Property name="text" type="java.lang.String" value="Batangas State University"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblProvince1">
@@ -743,7 +743,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Province"/>
+                        <Property name="text" type="java.lang.String" value="Batangas"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblCleanup1">
@@ -751,7 +751,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Cleanup Site"/>
+                        <Property name="text" type="java.lang.String" value="Beach"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel5">

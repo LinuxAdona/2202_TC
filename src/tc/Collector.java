@@ -248,13 +248,13 @@ public class Collector extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         lblLandmark.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        lblLandmark.setText("Landmark");
+        lblLandmark.setText("Batangas State University");
 
         lblProvince.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        lblProvince.setText("Province");
+        lblProvince.setText("Batangas");
 
         lblCleanup.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        lblCleanup.setText("Cleanup Site");
+        lblCleanup.setText("Beach");
 
         jLabel4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jLabel4.setText("Philippines");
@@ -527,13 +527,13 @@ public class Collector extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
         lblLandmark1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        lblLandmark1.setText("Landmark");
+        lblLandmark1.setText("Batangas State University");
 
         lblProvince1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        lblProvince1.setText("Province");
+        lblProvince1.setText("Batangas");
 
         lblCleanup1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        lblCleanup1.setText("Cleanup Site");
+        lblCleanup1.setText("Beach");
 
         jLabel5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jLabel5.setText("Philippines");
@@ -858,7 +858,7 @@ public class Collector extends javax.swing.JFrame {
     }
     
     private void addCollectedWaste(String name, String type, String bagId, int qty) {
-        String addSql = "INSERT INTO collected_waste (waste_id, bag_id, quantity, collected_at) VALUES (?, ?, ?, NOW())";
+        String addSql = "INSERT INTO collected_waste (waste_id, bag_id, quantity, collected_at, user_id) VALUES (?, ?, ?, NOW(), ?)";
         String weightSql = "SELECT weight FROM waste WHERE name = ? AND type = ?";
         String updateBagSql = "UPDATE bags SET total_weight = total_weight + ? WHERE bag_id = ?";
         String getBagWeightSql = "SELECT total_weight FROM bags WHERE bag_id = ?";
@@ -908,10 +908,12 @@ public class Collector extends javax.swing.JFrame {
             }
 
             // Add the collected waste
+            int user_id = getLoggedInUserID();
             try (PreparedStatement psAdd = conn.prepareStatement(addSql)) {
                 psAdd.setInt(1, wasteId);
                 psAdd.setInt(2, Integer.parseInt(bagId));
                 psAdd.setInt(3, qty);
+                psAdd.setInt(4, user_id);
                 psAdd.executeUpdate();
             }
 
